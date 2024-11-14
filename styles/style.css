@@ -1,0 +1,65 @@
+body {
+    background-color: #001a19;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: top;
+    flex-wrap: wrap;
+}
+
+.titleContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: top;
+    flex-wrap: wrap;
+    width: 1180px;
+    height: auto;
+    background-color: #00413f;
+    color: white;
+    font-size: xx-large;
+}
+
+.mapContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 1180px;
+    height: 812px;
+    background-color: #006362;
+}
+
+.flex-column {
+    flex-direction: column;
+    background-color: #02c5c1;
+}
+
+#map {
+    max-width: 1080px;
+    max-height: 712px;
+}
+
+
+@keyframes leafmovement {
+    0% {
+        transform: translate(-100px, 0) rotate(0);
+    }
+
+    20% {
+        transform: translate(15vw, 10vh) rotate(85deg);
+    }
+
+    65% {
+        transform: translate(55vw, 12vh) rotate(550deg);
+    }
+
+    80% {
+        transform: translate(70vw, 17vh) rotate(740deg);
+    }
+
+    100% {
+        transform: translate(100vw, 25vh) rotate(920deg);
+    }
+}
