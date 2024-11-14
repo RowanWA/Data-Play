@@ -5,13 +5,13 @@
 // };
 
 const locSel = document.getElementById("loc-sel");
-const barColors = ["rgba(253, 176, 48, 1.0)",];
+const barColors = ["rgba(253, 176, 48, 1.0)", "rgba(253, 176, 48, 1.0)", "rgba(253, 176, 48, 1.0)",];
 const borderColors = ["rgba(255, 255, 255, 1.0)",];
 
-let currentLocations = ["&nbsp","&nbsp", "&nbsp"];
-let cloudCoverData = [0, 0, 0];
-let BrightnessData = [0, 0, 0];
-let TemperatureData = [0, 0, 0];
+let currentLocations = ["blank","blank", "blank"];
+let cloudCoverData = [1, 1, 1];
+let BrightnessData = [1, 1, 1];
+let TemperatureData = [1, 1, 1];
 
 // let locationPosition = 0;
 
@@ -63,12 +63,15 @@ const cloChart = new Chart("cloudCover", {
     datasets: [{
       backgroundColor: barColors,
       data: cloudCoverData,
-      borderColor: borderColors,
     }]
   },
   options: {
-    color: "rgb(253, 176, 48)",
+    plugins: {
+      legend: {
+          display: false,
+        }
   }
+}
 });
 
 const uvChart = new Chart("uvIndex", {
@@ -78,12 +81,15 @@ const uvChart = new Chart("uvIndex", {
     datasets: [{
       backgroundColor: barColors,
       data: cloudCoverData,
-      borderColor: borderColors,
     }]
   },
   options: {
-    color: "rgb(253, 176, 48)",
+    plugins: {
+      legend: {
+          display: false,
+        }
   }
+}
 });
 
 const tempChart = new Chart("feelsLike", {
@@ -93,12 +99,15 @@ const tempChart = new Chart("feelsLike", {
     datasets: [{
       backgroundColor: barColors,
       data: cloudCoverData,
-      borderColor: borderColors,
     }]
   },
   options: {
-    color: "rgb(253, 176, 48)",
+    plugins: {
+      legend: {
+          display: false,
+        }
   }
+}
 });
 
 

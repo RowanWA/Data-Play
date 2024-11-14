@@ -81,8 +81,9 @@ body {
 
 .canvas {
     background-color: #006362;
-    height: 150px;
-    width: 300px;
+    height: 150px !important;
+    width: 300px !important;
+    position: static;
 }
 
 .locations-background {
