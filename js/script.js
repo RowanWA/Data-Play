@@ -39,7 +39,7 @@ async function fetchData() {
     const json = await response.json();
     // query: "Norwich",
 
-    udpateCloudCover(json.current.cloudcover);
+    updateCloudCover(json.current.cloudcover);
     updateBrightness(json.current.uv_index);
     updateTemperature(json.current.feelslike);
   } catch (error) {
@@ -54,15 +54,15 @@ async function fetchData() {
   
 
 
-function udpateCloudCover(newValue) {
+function updateCloudCover(newValue) {
    cloudCoverData[locationPosition].value.innerHTML = newValue;
 }
 
-function udpateBrightness(newValue) {
+function updateBrightness(newValue) {
   BrightnessData[locationPosition].value.innerHTML = newValue;
 }
 
-function udpateTemperature(newValue) {
+function updateTemperature(newValue) {
   TemperatureData[locationPosition].value.innerHTML = newValue;
 }
 
