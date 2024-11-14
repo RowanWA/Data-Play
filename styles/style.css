@@ -1,47 +1,125 @@
 body {
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
     background-color: #001a19;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: top;
-    flex-wrap: wrap;
 }
 
-.titleContainer {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: top;
-    flex-wrap: wrap;
-    width: 1180px;
-    height: auto;
-    background-color: #00413f;
-    color: white;
-    font-size: xx-large;
-}
-
-.mapContainer {
+.container {
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    width: 1180px;
-    height: 812px;
+    width: 800px;
+    height: 450px; 
+    margin-left: 75px;
+    margin-right: 75px;
+    margin-bottom: 75px;
+    background-color: #02c5c1;
+}
+
+.main-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 950px;
+    height: 600px;
     background-color: #006362;
 }
 
 .flex-column {
+    display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
     background-color: #02c5c1;
+    height: 200px;
+    width: 300px;
+    color: #6d470b;
+    font-weight: bold;
 }
 
-#map {
-    max-width: 1080px;
-    max-height: 712px;
+.option-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: #02c5c1;
+    height: 150px;
+    width: 300px;
+    color: #fdb030;
 }
 
+.title-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 950px;
+    height: 75px;
+    font-size: xx-large;
+    color: #fdb030;
+}
 
+.option-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 300px;
+    height: 110px;
+    background-color: #006362;
+    color: #fdb030;
+}
+
+.canvas {
+    background-color: #006362;
+    height: 150px;
+    width: 300px;
+}
+
+.locations-background {
+    background-color: #006362;
+    width: 300px;
+}
+
+#main-div {
+    width: 950px;
+    height: 600px;
+    display: flex;
+    align-items: start;
+}
+
+#left-panel {
+    height: 450px;
+    width: 300px;
+    border-color: #02c5c1;
+    display: flex;
+    flex-direction: column;
+    justify-content: right;
+    margin-left: 66px;
+    margin-right: 33px;
+}
+
+#right-panel {
+    height: 450px;
+    width: 300px;
+    background-color: #02c5c1;
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    margin-left: 33px;
+    margin-right: 66px;
+
+}
+
+/* 
 @keyframes leafmovement {
     0% {
         transform: translate(-100px, 0) rotate(0);
@@ -62,4 +140,4 @@ body {
     100% {
         transform: translate(100vw, 25vh) rotate(920deg);
     }
-}
+} */

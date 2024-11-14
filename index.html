@@ -7,35 +7,53 @@
     <link rel="stylesheet" href="styles/style.css" />
     <script src="js/script.js" defer></script>
     <title>Document</title>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js">
+    </script>
 </head>
 
-<body id="body">
+<body>
 
-    <!-- humidity filter div -->
-    <div class="titleContainer">
-        <h1>
-            My Earthquake Moniter
-        </h1>
-    </div>
-
-    <div>
-        <div id="main-div" class="container">
-            <!-- Temperature slider on left -->
-            <div class="mapContainer flex-column">
-                <img id="map" src="assets/map.jpg" />
+    <div id="main-div">
+        <div class="main-container">
+            <div class="title-container">
+                <h1>Choose To Be?</h1>
             </div>
+            <div class="container">
+                <div id="left-panel" class="flex-column">
+                    <div class="left flex-column">
+                        <p class="breed-p">
+                            Location:
+                        </p>
+                        <div class="locations-background option-column">
+                            <select id="loc-sel" class="location-select">
+                                <option value="choose">none</option>
+                            </select>
+                            <div id="choices" class="option-container">
+                            
+                            </div>
+                            <button id="compare-button" class="button">Compare</button>
+                        </div>
+                    </div>
 
-            <!-- wind & humidity on right -->
-            <div class="flex-column">
+                    <div  class="flex-column">
+                        <p>Cloud Coverage</p>
+                        <canvas id="cloudcover" class="canvas"></canvas>
+                    </div>
+                </div>
 
-                <div class="flex-column">
+                <div id="right-panel" class="flex-column">
+                    <div class="flex-column">
+                        <p>Brightness</p>
+                        <canvas id="uvIndex" class="canvas"></canvas>
+                    </div>
+
+                    <div class="right flex-column">
+                        <p>Temperature</p>
+                        <canvas id="feelsLike" class="canvas"></canvas>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
 </body>
-
-
 
 </html>

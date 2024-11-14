@@ -1,21 +1,29 @@
-// const apiUrl = 
-const apiUrl = "https://earthquake.usgs.gov/fdsnws/event/1/application.json";
+// const apiUrl = "/assets/data/test.json";
+const apiUrl = "https://api.weatherstack.com/current?";
+const urlParams = {
+  query: "Norwich",
+  access_key: "31c2be1ceacb391cc162ad3af2b216c9",
+};
 
-query: "minlatitude"
-query: "maxlatitude"
+//sliders
+const humiditySlider = document.getElementById("humidity-slider");
+const windSlider = document.getElementById("wind-slider");
+const temperatureSlider = document.getElementById("temperature-slider");
 
-earthquakeCount
+//values
+const temperatureValue = document.getElementById("temperature-value");
+const humidityValue = document.getElementById("humidity-value");
+const windValue = document.getElementById("wind-value");
 
-let img = new Image(1,1);
-img.src = 'http://www.testtrackinglink.com';
+//animations
+const leafAnimations = document.getElementsByClassName("leaf");
 
+//filter
+const humidityFilter = document.getElementById("humidity-filter");
 
-
-
-
-
-setInterval(fetchData, 500);
-
+/**
+ *
+ */
 async function fetchData() {
   try {
     //get response from api
@@ -64,4 +72,6 @@ function updateTemperature(newValue) {
   temperatureValue.innerHTML = newValue;
 }
 
-
+// fetchData();
+//fetch data every half second
+setInterval(fetchData, 500);
