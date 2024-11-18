@@ -20,6 +20,22 @@ body {
     background-color: #02c5c1;
 }
 
+.flex-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.flex-scheme {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
 .main-container {
     display: flex;
     flex-direction: column;
@@ -46,7 +62,7 @@ body {
 .option-column {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     flex-wrap: wrap;
     background-color: #02c5c1;
@@ -90,6 +106,12 @@ body {
     background-color: #006362;
     width: 300px;
 }
+
+.key-scheme {
+    height: 80px;
+    width: 80px;
+}
+
 
 #main-div {
     width: 950px;

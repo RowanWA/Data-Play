@@ -5,7 +5,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="styles/style.css" />
+    <link rel="stylesheet" href="styles/anims.css" />
     <script src="js/script.js" defer></script>
+    <script src="js/charts.js" defer></script>
     <title>Document</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js">
     </script>
@@ -21,36 +23,76 @@
             <div class="container">
                 <div id="left-panel" class="flex-column">
                     <div class="flex-column">
-                        <p class="breed-p">
+                        <p>
                             Location:
                         </p>
                         <div class="locations-background option-column">
-                            <select id="loc-sel" class="location-select">
-                                <option value="choose">none</option>
-                            </select>
-                            <div class="option-container">
-                                <div id="choice1">&nbsp</div>
-                                <div id="choice2">&nbsp</div>
-                                <div id="choice3">&nbsp</div>
+                            <div class="flex-scheme">
+                                <div>
+                                    <img class="key-scheme" src="assets/Norwich_color.png">
+                                </div>
+                                <div>
+                                    Norwich
+                                </div>
                             </div>
-                            <button id="compare-button" class="button">Compare</button>
+                            <div class="flex-scheme">
+                                <div>
+                                    <img class="key-scheme" src="assets/Denpasar_color.png">
+                                </div>
+                                <div>
+                                    Denpasar
+                                </div>
+                            </div>
+                            <div class="flex-scheme">
+                                <div>
+                                    <img class="key-scheme" src="assets/Reykjavík_color.png">
+                                </div>
+                                <div>
+                                    Reykjavík
+                                </div>
+                            </div>
                         </div>
                     </div>
 
                     <div  class="flex-column">
-                        <p>Cloud Coverage</p>
+                        <p>Cloud Coverage (%)</p>
                         <canvas id="cloudCover" class="canvas"></canvas>
                     </div>
                 </div>
 
                 <div id="right-panel" class="flex-column">
                     <div class="flex-column">
-                        <p>Brightness</p>
-                        <canvas id="uvIndex" class="canvas"></canvas>
+                        <p>Brightness (UV Index)</p>
+                        <div class="locations-background option-column">
+                            <div class="flex-scheme">
+                                <div>
+                                    <img id="nSun" class="key-scheme" src="assets/sun-0.png">
+                                </div>
+                                <div>
+                                    Norwich
+                                </div>
+                            </div>
+                            <div class="flex-scheme">
+                                <div>
+                                    <img id="dSun" class="key-scheme" src="assets/sun-0.png">
+                                </div>
+                                <div>
+                                    Denpasar
+                                </div>
+                            </div>
+                            <div class="flex-scheme">
+                                <div>
+                                    <img id="rSun" class="key-scheme" src="assets/sun-0.png">
+                                </div>
+                                <div>
+                                    Reykjavík
+                                </div>
+                            </div>
+                        </div>
                     </div>
 
                     <div class="flex-column">
-                        <p>Temperature</p>
+                        <p>Temperature (°C)</p>
                         <canvas id="feelsLike" class="canvas"></canvas>
                     </div>
                 </div>
