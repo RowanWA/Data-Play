@@ -2,17 +2,17 @@
 
 #nSun {
     position: static;
-    animation: rotate 5s linear infinite;
+    animation: rotate 0s linear infinite;
 }
 
 #dSun {
     position: static;
-    animation: rotate 5s linear infinite;
+    animation: rotate 0s linear infinite;
 }
 
 #rSun {
     position: static;
-    animation: rotate 5s linear infinite;
+    animation: rotate 0s linear infinite;
 }
 
 @keyframes rotate {
