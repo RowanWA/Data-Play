@@ -1,31 +1,42 @@
 <!DOCTYPE html>
+<!-- sets language to english -->
 <html lang="en">
 
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- links the stylesheets -->
     <link rel="stylesheet" href="styles/style.css" />
     <link rel="stylesheet" href="styles/anims.css" />
+    <!-- links the javascript files -->
     <script src="js/script.js" defer></script>
     <script src="js/charts.js" defer></script>
     <title>Document</title>
+    <!-- imports script used for Chart.js -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js">
     </script>
 </head>
 
+<!-- does first fetch of data before the interval starts so charts etc load with correct data -->
 <body onload="fetchData()">
-
+    <!-- sets up overall container -->
     <div id="main-div">
+        <!-- creates container for the elements in the site -->
         <div class="main-container">
+            <!-- creates container for the title -->
             <div class="title-container">
-                <h1>Choose To Be?</h1>
+                <h1>Forcast Fuse</h1>
             </div>
+            <!-- creates row flex container to hold the left and right sides of the site  -->
             <div class="container">
+                <!-- creates flex column with extra css for left side -->
                 <div id="left-panel" class="flex-column">
+                    <!-- creates overall flex container to contain list of locations and colors for them -->
                     <div class="flex-column">
                         <p>
                             Location:
                         </p>
+                        <!-- creates flex column for the specific color images and names -->
                         <div class="locations-background option-column">
                             <div class="flex-scheme">
                                 <div>
@@ -53,18 +64,23 @@
                             </div>
                         </div>
                     </div>
-
+                    <!-- creates container for cloud coverage title and the bar graph -->
                     <div  class="flex-column">
                         <p>Cloud Coverage (%)</p>
                         <canvas id="cloudCover" class="canvas"></canvas>
                     </div>
                 </div>
-
+                <!-- creates flex column with extra css for right side -->
                 <div id="right-panel" class="flex-column">
+                    <!-- creates container for UV index and the changing animated images  -->
                     <div class="flex-column">
                         <p>Brightness (UV Index)</p>
+                        <!-- creates flex column to contain data, names and images -->
                         <div class="locations-background option-column">
                             <div class="flex-scheme">
+                                <div id="nUV">
+                                    0
+                                </div>
                                 <div>
                                     <img id="nSun" class="key-scheme" src="assets/sun-blank.png">
                                 </div>
@@ -73,6 +89,9 @@
                                 </div>
                             </div>
                             <div class="flex-scheme">
+                                <div id="dUV">
+                                    0
+                                </div>
                                 <div>
                                     <img id="dSun" class="key-scheme" src="assets/sun-blank.png">
                                 </div>
@@ -81,6 +100,9 @@
                                 </div>
                             </div>
                             <div class="flex-scheme">
+                                <div id="rUV">
+                                    0
+                                </div>
                                 <div>
                                     <img id="rSun" class="key-scheme" src="assets/sun-blank.png">
                                 </div>
@@ -90,7 +112,7 @@
                             </div>
                         </div>
                     </div>
-
+                    <!-- creates container for temperature title and the bar graph -->
                     <div class="flex-column">
                         <p>Temperature (°C)</p>
                         <canvas id="feelsLike" class="canvas"></canvas>

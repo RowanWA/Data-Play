@@ -1,22 +1,33 @@
 body {
+    /* setting flex display */
     display:flex; 
+    /* setting the direction of the flex to be vertical */
     flex-direction:column; 
+    /* setting content to be in the middle of the container */
     align-items:center;
+    /* setting minimum height for whole page*/
     min-height:100vh;
     background-color: #001a19;
 }
 
 .container {
     display: flex;
+    /* setting the direction of the flex to be vertical */
     flex-direction: row;
+    /* centering content to middle of the page */
     justify-content: center;
+    /* setting content to be in the middle of the container */
     align-items: center;
+    /* allowing for wrapping of the flex box */
     flex-wrap: wrap;
+    /* defining size of the container */
     width: 800px;
     height: 450px; 
+    /* creating margins for container */
     margin-left: 75px;
     margin-right: 75px;
     margin-bottom: 75px;
+    /* setting container colour */
     background-color: #02c5c1;
 }
 

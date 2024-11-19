@@ -1,5 +1,4 @@
-
-
+/* assigning animations to the image that can be changed by the charts.js */
 #nSun {
     position: static;
     animation: rotate 0s linear infinite;
@@ -15,6 +14,7 @@
     animation: rotate 0s linear infinite;
 }
 
+/* defining animations that make images spin */
 @keyframes rotate {
     from {
         transform: rotate(0deg);
