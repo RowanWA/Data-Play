@@ -65,5 +65,5 @@ function updateTemperature(newValue) {
 
 
 
-setInterval(fetchData, 500);
+// setInterval(fetchData, 500);
 
