@@ -1,13 +1,13 @@
 // contains example data in a json file
-    const apiUrl = "assets/data/test.json";
+    // const apiUrl = "assets/data/test.json";
 
 // contains link to live data source
-    // const apiUrl = "https://api.weatherstack.com/current?";
+    const apiUrl = "https://api.weatherstack.com/current?";
 
 // contains query and access key required for use when running from live data source
 const urlParams = {
-    // query: "Norwich",
-    // access_key: "55965b5a3d1a104583667bfeed40aea8",
+    query: "Norwich",
+    access_key: "55965b5a3d1a104583667bfeed40aea8",
 };
 
 // defines colours for the text and bars for the bar charts
